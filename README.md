@@ -1,11 +1,15 @@
-polyglot-utils
-==============
+docker-available-tools
+======================
 
-https://github.com/rsp/polyglot-utils
+https://github.com/rsp/docker-available-tools
 
-Simple utilities written in few different languages.
-Written for comparison and for fallbacks to be used in shell scripts
-depending on which tools and interpreters are available.
+Test what tools that are useful in shell scripts are available by default
+in Docker containers with some popular distribution minimal images.
+
+Prerequisites
+-------------
+* [Bash](https://www.gnu.org/software/bash/)
+* [Docker](https://www.docker.com/)
 
 Author
 ------
