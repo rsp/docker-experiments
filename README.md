@@ -13,7 +13,7 @@ Prerequisites
 
 Author
 ------
-Rafał Pocztarski - https://github.com/rsp
+[Rafał Pocztarski](https://github.com/rsp)
 
 License
 -------
