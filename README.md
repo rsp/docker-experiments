@@ -11,6 +11,11 @@ Prerequisites
 * [Bash](https://www.gnu.org/software/bash/)
 * [Docker](https://www.docker.com/)
 
+It should work on any standard Linux distribution.
+If it doesn't, please [sumbit an issue](https://github.com/rsp/docker-available-tools/issues).
+
+It is written and tested on Ubuntu 14.04 with Docker version 1.5.0, build a8a31ef.
+
 Author
 ------
 [Rafał Pocztarski](https://github.com/rsp)
