@@ -17,4 +17,4 @@ Rafał Pocztarski - https://github.com/rsp
 
 License
 -------
-MIT License (Expat). See LICENSE.md for details.
+MIT License (Expat). See [LICENSE.md](LICENSE.md) for details.
