@@ -2,8 +2,12 @@
 
 # check-images from docker-available-tools
 # https://github.com/rsp/docker-available-tools
+# by Rafał Pocztarski - https://github.com/rsp
 
 if [ $# -ne 1 ]; then
+	echo "docker-available-tools/check-images"
+	echo "See: https://github.com/rsp/docker-available-tools"
+	echo
 	echo "Usage: $0 \"image1 image2 ...\""
 	exit 1
 fi

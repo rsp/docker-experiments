@@ -21,6 +21,8 @@ with Docker version 1.5.0, build a8a31ef.
 ### Note:
 Make sure you have sufficient permissions to run `docker`.
 You may need to run the scripts with: `sudo ./script-name`.
+You need to be in the same directory as the scripts
+becasue they run each other with `./script-name`.
 
 Commands
 --------
