@@ -14,7 +14,10 @@ images="$1"
 echo "docker-available-tools/system-info - data from `date -I`"
 echo "See: https://github.com/rsp/docker-available-tools"
 
+echo -e "Image\tOS"
+echo -e "-----\t--"
 for image in $images; do
-	echo -ne "$image:\t"
-	docker run $image bash -c "cat /etc/*-release | grep PRETTY_NAME | cut -d '\"' -f 2" || echo "ERROR!"
+	echo -ne "$image\t"
+	docker run --entrypoint=/bin/sh $image -c \
+		"cat /etc/*-release | grep PRETTY_NAME | cut -d '\"' -f 2" || echo "ERROR!"
 done

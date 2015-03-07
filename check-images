@@ -18,7 +18,7 @@ echo "Checking images: $images"
 
 for image in $images; do
 	echo "Checking '$image' image..."
-	docker run $image true || (echo "Cannot run '$image' image!"; exit 1)
+	docker run --entrypoint=/bin/sh $image -c true || (echo "Cannot run '$image' image!"; exit 1)
 done
 
 echo "All images are ok: $images"
