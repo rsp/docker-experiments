@@ -27,11 +27,18 @@ becasue they run each other with `./script-name`.
 Commands
 --------
 
-### `check-images "image1 image2"`
+### `check-images "image1 image2 ..."`
 
-E.g. `sudo check-images "debian ubuntu"`
+E.g. `sudo ./check-images "centos debian ubuntu"`
 
 Checks if the given list of images can be run. Used by other scripts.
+
+### `system-info "image1 image2 ..."`
+
+E.g. `sudo ./system-info "centos debian ubuntu"`
+
+Shows the name and version of the operating system distribution
+that is run using that image name.
 
 Author
 ------

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# system-info from docker-available-tools
+# https://github.com/rsp/docker-available-tools
+# by Rafał Pocztarski - https://github.com/rsp
+
+if [ $# -ne 1 ]; then
+	echo "Usage: $0 \"image1 image2 ...\""
+	exit 1
+fi
+
+images="$1"
+
+echo "docker-available-tools/system-info - data from `date -I`"
+echo "See: https://github.com/rsp/docker-available-tools"
+
+for image in $images; do
+	echo -ne "$image:\t"
+	docker run $image bash -c "cat /etc/*-release | grep PRETTY_NAME | cut -d '\"' -f 2" || echo "ERROR!"
+done
