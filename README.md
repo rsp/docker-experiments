@@ -79,6 +79,36 @@ wordpress | Debian GNU/Linux 8 (jessie)
 Almost every image except specific distributions
 seems to be based on Debian - some on version 7, some on 8.
 
+### Disk usage
+
+Here is the disk usage of some of the popular images - as of 2015-03-07:
+
+Image | Disk usage
+----- | ----------
+busybox | **2.6M**
+debian | 97M
+nginx | 106M
+redis | 123M
+mageia | 172M
+rethinkdb | 188M
+ubuntu | 209M
+centos | 224M
+postgres | 229M
+fedora | 254M
+mongo | 261M
+opensuse | 284M
+mysql | 289M
+php | 443M
+wordpress | 524M
+python | 708M
+iojs | 731M
+node | 740M
+perl | 754M
+ruby | 801M
+gcc | **1.5G**
+
+(This data was collected using the command: `./disk-usage "debian ubuntu centos fedora opensuse mageia busybox python ruby perl php gcc node iojs redis nginx postgres mysql mongo rethinkdb wordpress" | sed 's/\t/ | /g;'`)
+
 Author
 ------
 [Rafał Pocztarski](https://github.com/rsp)
