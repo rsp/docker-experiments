@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# check-images from docker-available-tools
-# https://github.com/rsp/docker-available-tools
+# check-images from docker-experiments
+# https://github.com/rsp/docker-experiments
 # by Rafał Pocztarski - https://github.com/rsp
 
 if [ $# -ne 1 ]; then
-	echo "docker-available-tools/check-images"
-	echo "See: https://github.com/rsp/docker-available-tools"
+	echo "docker-experiments/check-images"
+	echo "See: https://github.com/rsp/docker-experiments"
 	echo
 	echo "Usage: $0 \"image1 image2 ...\""
 	exit 1

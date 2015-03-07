@@ -1,7 +1,7 @@
-docker-available-tools
-======================
+docker-experiments
+==================
 
-https://github.com/rsp/docker-available-tools
+https://github.com/rsp/docker-experiments
 
 Test what tools that are useful in shell scripts are available by default
 in Docker containers with some popular distribution minimal images
@@ -13,7 +13,7 @@ Prerequisites
 * [Docker](https://www.docker.com/)
 
 It should work on any standard Linux distribution. If it doesn't,
-please [sumbit an issue](https://github.com/rsp/docker-available-tools/issues).
+please [sumbit an issue](https://github.com/rsp/docker-experiments/issues).
 
 It is written and tested on Ubuntu 14.04
 with Docker version 1.5.0, build a8a31ef.

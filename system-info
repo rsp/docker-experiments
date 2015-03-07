@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# system-info from docker-available-tools
-# https://github.com/rsp/docker-available-tools
+# system-info from docker-experiments
+# https://github.com/rsp/docker-experiments
 # by Rafał Pocztarski - https://github.com/rsp
 
 if [ $# -ne 1 ]; then
@@ -11,8 +11,8 @@ fi
 
 images="$1"
 
-echo "docker-available-tools/system-info - data from `date -I`"
-echo "See: https://github.com/rsp/docker-available-tools"
+echo "docker-experiments/system-info - data from `date -I`"
+echo "See: https://github.com/rsp/docker-experiments"
 
 echo -e "Image\tOS"
 echo -e "-----\t---"
