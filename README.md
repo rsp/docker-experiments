@@ -40,6 +40,13 @@ E.g. `sudo ./system-info "centos debian ubuntu"`
 Shows the name and version of the operating system distribution
 that is run using that image name.
 
+### `sudo ./disk-usage "image1 image2 ..."`
+
+E.g. `./disk-usage "busybox debian ubuntu centos"`
+
+Show how much disk usage is shown by the command: `du -sh`
+- see: [`du(1)`](http://man7.org/linux/man-pages/man1/du.1.html).
+
 Results of experiments
 ----------------------
 
