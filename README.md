@@ -62,6 +62,7 @@ busybox | Buildroot 2014.02
 python | Debian GNU/Linux 8 (jessie)
 ruby | Debian GNU/Linux 8 (jessie)
 perl | Debian GNU/Linux 8 (jessie)
+php | Debian GNU/Linux 8 (jessie)
 gcc | Debian GNU/Linux 7 (wheezy)
 node | Debian GNU/Linux 8 (jessie)
 iojs | Debian GNU/Linux 8 (jessie)
@@ -71,8 +72,9 @@ postgres | Debian GNU/Linux 7 (wheezy)
 mysql | Debian GNU/Linux 7 (wheezy)
 mongo | Debian GNU/Linux 7 (wheezy)
 rethinkdb | Debian GNU/Linux 8 (jessie)
+wordpress | Debian GNU/Linux 8 (jessie)
 
-(This data was collected using the command: `./system-info "debian ubuntu centos fedora opensuse mageia busybox python ruby perl gcc node iojs redis nginx postgres mysql mongo rethinkdb wordpress"`)
+(This data was collected using the command: `./system-info "debian ubuntu centos fedora opensuse mageia busybox python ruby perl php gcc node iojs redis nginx postgres mysql mongo rethinkdb wordpress"`)
 
 Almost every image except specific distributions
 seems to be based on Debian - some on version 7, some on 8.
