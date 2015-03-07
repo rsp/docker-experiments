@@ -15,7 +15,7 @@ echo "docker-available-tools/system-info - data from `date -I`"
 echo "See: https://github.com/rsp/docker-available-tools"
 
 echo -e "Image\tOS"
-echo -e "-----\t--"
+echo -e "-----\t---"
 for image in $images; do
 	echo -ne "$image\t"
 	docker run --entrypoint=/bin/sh $image -c \

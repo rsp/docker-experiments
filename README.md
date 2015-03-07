@@ -51,7 +51,7 @@ Here are the names and versions of OS distros
 used by some of the popular images - as of 2015-03-07:
 
 Image | OS
------ | --
+----- | ---
 debian | Debian GNU/Linux 7 (wheezy)
 ubuntu | Ubuntu 14.04.2 LTS
 centos | CentOS Linux 7 (Core)
