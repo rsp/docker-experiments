@@ -10,13 +10,6 @@
 echo "test-commands - data from `date -I`"
 echo "See: https://github.com/rsp/docker-experiments"
 
-echo "Downloading/checking images..." >&2
-
-for image in $images; do
-	echo "Checking $image..."
-	docker run $image true || (echo "Cannot download $image image!"; exit 1)
-done >&2
-
 for image in $images; do
 	echo -ne "$image:\t"
 	docker run $image bash -c "lsb_release -sd"
@@ -31,7 +24,8 @@ echo
 for command in $commands; do
 	echo -ne "$command\t"
 	for image in $images; do
-		docker run $image bash -c "command -v $command >/dev/null 2>&1" && result="YES" || result=NO
+		docker run --entrypoint=/bin/sh $image -c \
+		"command -v $command >/dev/null 2>&1" && result="YES" || result=NO
 		echo -ne "$result\t";
 	done
 	echo
