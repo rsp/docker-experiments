@@ -10,11 +10,6 @@
 echo "test-commands - data from `date -I`"
 echo "See: https://github.com/rsp/docker-experiments"
 
-for image in $images; do
-	echo -ne "$image:\t"
-	docker run $image bash -c "lsb_release -sd"
-done
-
 echo -ne " \t"
 for image in $images; do
 	echo -ne "$image\t"
