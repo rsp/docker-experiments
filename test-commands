@@ -22,17 +22,17 @@ for image in $images; do
 	docker run $image bash -c "lsb_release -sd"
 done
 
-echo -ne "\\ $delim"
+echo -ne " \t"
 for image in $images; do
-	echo -ne "$image$delim"
+	echo -ne "$image\t"
 done
 echo
 
 for command in $commands; do
-	echo -ne "$command$delim"
+	echo -ne "$command\t"
 	for image in $images; do
 		docker run $image bash -c "command -v $command >/dev/null 2>&1" && result="YES" || result=NO
-		echo -ne "$result$delim";
+		echo -ne "$result\t";
 	done
 	echo
 done
