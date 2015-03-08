@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# test-commands from docker-available-tools
+# https://github.com/rsp/docker-available-tools
+
+[ "$1" != "" ] && images="$1" || images="ubuntu centos"
+[ "$2" != "" ] && commands="$2" || commands="perl python"
+[ "$3" != "" ] && delim="$3" || delim="\t"
+
+echo "test-commands - data from `date -I`"
+echo "See: https://github.com/rsp/docker-available-tools"
+
+echo "Downloading/checking images..." >&2
+
+for image in $images; do
+	echo "Checking $image..."
+	docker run $image true || (echo "Cannot download $image image!"; exit 1)
+done >&2
+
+for image in $images; do
+	echo -ne "$image:\t"
+	docker run $image bash -c "lsb_release -sd"
+done
+
+echo -ne "\\ $delim"
+for image in $images; do
+	echo -ne "$image$delim"
+done
+echo
+
+for command in $commands; do
+	echo -ne "$command$delim"
+	for image in $images; do
+		docker run $image bash -c "command -v $command >/dev/null 2>&1" && result="YES" || result=NO
+		echo -ne "$result$delim";
+	done
+	echo
+done
+
