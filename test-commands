@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# test-commands from docker-available-tools
-# https://github.com/rsp/docker-available-tools
+# test-commands from docker-experiments
+# https://github.com/rsp/docker-experiments
+# by Rafał Pocztarski - https://github.com/rsp
 
 [ "$1" != "" ] && images="$1" || images="ubuntu centos"
 [ "$2" != "" ] && commands="$2" || commands="perl python"
-[ "$3" != "" ] && delim="$3" || delim="\t"
 
 echo "test-commands - data from `date -I`"
-echo "See: https://github.com/rsp/docker-available-tools"
+echo "See: https://github.com/rsp/docker-experiments"
 
 echo "Downloading/checking images..." >&2
 
