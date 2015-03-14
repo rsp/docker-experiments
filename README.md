@@ -40,12 +40,16 @@ E.g. `sudo ./system-info "centos debian ubuntu"`
 Shows the name and version of the operating system distribution
 that is run using that image name.
 
-### `sudo ./disk-usage "image1 image2 ..."`
+### `disk-usage "image1 image2 ..."`
 
 E.g. `./disk-usage "busybox debian ubuntu centos"`
 
 Show how much disk usage is shown by the command: `du -sh`
 - see: [`du(1)`](http://man7.org/linux/man-pages/man1/du.1.html).
+
+### `test-commands "image1 image2 ..." "command1 command2 ..."`
+
+E.g. `sudo ./test-commands "ubuntu centos" "perl python"
 
 Results of experiments
 ----------------------
@@ -114,7 +118,40 @@ perl | 754M
 ruby | 801M
 gcc | **1.5G**
 
-(This data was collected using the command: `./disk-usage "debian ubuntu centos fedora opensuse mageia busybox python ruby perl php gcc node iojs redis nginx postgres mysql mongo rethinkdb wordpress" | sed 's/\t/ | /g;'`)
+(This data was collected using the command: `./disk-usage "debian ubuntu centos fedora opensuse mageia busybox python ruby perl php gcc node iojs redis nginx postgres mysql mongo rethinkdb wordpress"`)
+
+### Test commands
+
+Here are some interesting commands available in some popular images - as of 2015-03-08:
+
+(This data was collected using the command: `./disk-usage "debian ubuntu centos ..." "perl python ruby ..."`
+
+#### Shells:
+
+
+#### Scripting languages:
+
+. | debian | ubuntu | fedora | centos
+---- | ------ | ------ | ------ | ------
+perl | YES | YES | NO | NO
+python | NO | NO | YES | YES
+python3 | NO | YES | NO | NO
+lua | NO | NO | YES | YES
+ruby | NO | NO | NO | NO
+
+(data from 2015-03-14, collected with `./test-commands "debian ubuntu fedora centos" "perl python python3 lua ruby"`)
+
+* Perl is available in Debian and Ubuntu, but not in Fedora and CentOS.
+* Python 2 is available in Fedora and CentOS, but not in Debian and Ubuntu.
+* Python 3 is available in Ubuntu, but not in Debian, Fedora and CentOS.
+* Lua is available in Fedora and CentOS, but not in Debian and Ubuntu.
+* Ruby is not available in either Debian, Ubuntu, Fedora or CentOS.
+
+See also
+---------
+Those scripts are referenced in the following answers on Stack Exchange:
+
+* [Docker: How to get image size?](http://unix.stackexchange.com/questions/134186/docker-how-to-get-image-size/188717#188717)
 
 Author
 ------

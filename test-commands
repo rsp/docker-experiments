@@ -10,9 +10,15 @@
 echo "test-commands - data from `date -I`"
 echo "See: https://github.com/rsp/docker-experiments"
 
-echo -ne " \t"
+echo -ne ".\t"
 for image in $images; do
 	echo -ne "$image\t"
+done
+echo
+
+echo -ne "----\t"
+for image in $images; do
+	echo -ne "${image//?/-}\t"
 done
 echo
 
