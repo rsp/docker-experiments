@@ -132,21 +132,21 @@ Testing for some shells described in [Unix shell - Shell categories](https://en.
 
 . | debian | ubuntu | centos | fedora | opensuse | mageia | busybox
 ---- | ------ | ------ | ------ | ------ | -------- | ------ | -------
-sh | YES | YES | YES | YES | YES | YES | YES
-ash | - | - | - | - | - | YES | YES
-bash | YES | YES | YES | YES | YES | YES | -
-dash | YES | YES | - | - | - | - | -
-ksh | - | - | - | - | - | - | -
-pdksh | - | - | - | - | - | - | -
-mksh | - | - | - | - | - | - | -
-zsh | - | - | - | - | - | - | -
-csh | - | - | - | - | - | - | -
-tcsh | - | - | - | - | - | - | -
-fish | - | - | - | - | - | - | -
-scsh | - | - | - | - | - | - | -
-busybox | - | - | - | - | - | - | YES
+sh | dash  | dash  | bash  | bash  | bash  | bash  | busybox 
+ash | -  | -  | -  | -  | -  | dash.static  | busybox 
+bash | bash  | bash  | bash  | bash  | bash  | bash  | - 
+dash | dash  | dash  | -  | -  | -  | -  | - 
+ksh | -  | -  | -  | -  | -  | -  | - 
+pdksh | -  | -  | -  | -  | -  | -  | - 
+mksh | -  | -  | -  | -  | -  | -  | - 
+zsh | -  | -  | -  | -  | -  | -  | - 
+csh | -  | -  | -  | -  | -  | -  | - 
+tcsh | -  | -  | -  | -  | -  | -  | - 
+fish | -  | -  | -  | -  | -  | -  | - 
+scsh | -  | -  | -  | -  | -  | -  | - 
+busybox | -  | -  | -  | -  | -  | -  | busybox 
 
-(data from 2015-03-17, collected on `./test-commands "debian ubuntu centos fedora opensuse mageia busybox" "sh ash bash dash ksh pdksh mksh zsh csh tcsh fish scsh busybox"`)
+(data from 2015-03-17, collected on `./real-commands "debian ubuntu centos fedora opensuse mageia busybox" "sh ash bash dash ksh pdksh mksh zsh csh tcsh fish scsh busybox" `)
 
 #### Scripting languages:
 
