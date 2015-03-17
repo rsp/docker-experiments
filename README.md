@@ -136,6 +136,7 @@ sh | dash  | dash  | bash  | bash  | bash  | bash  | busybox
 ash | -  | -  | -  | -  | -  | dash.static  | busybox 
 bash | bash  | bash  | bash  | bash  | bash  | bash  | - 
 dash | dash  | dash  | -  | -  | -  | -  | - 
+dash.static | -  | -  | -  | -  | -  | dash.static  | - 
 ksh | -  | -  | -  | -  | -  | -  | - 
 pdksh | -  | -  | -  | -  | -  | -  | - 
 mksh | -  | -  | -  | -  | -  | -  | - 
@@ -146,7 +147,7 @@ fish | -  | -  | -  | -  | -  | -  | -
 scsh | -  | -  | -  | -  | -  | -  | - 
 busybox | -  | -  | -  | -  | -  | -  | busybox 
 
-(data from 2015-03-17, collected on `./real-commands "debian ubuntu centos fedora opensuse mageia busybox" "sh ash bash dash ksh pdksh mksh zsh csh tcsh fish scsh busybox" `)
+(data from 2015-03-17, collected on `./real-commands "debian ubuntu centos fedora opensuse mageia busybox" "sh ash bash dash dash.static ksh pdksh mksh zsh csh tcsh fish scsh busybox"`)
 
 #### Scripting languages:
 
