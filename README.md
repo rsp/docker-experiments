@@ -128,6 +128,25 @@ Here are some interesting commands available in some popular images - as of 2015
 
 #### Shells:
 
+Testing for some shells described in [Unix shell - Shell categories](https://en.wikipedia.org/wiki/Unix_shell#Shell_categories) on Wikipedia.
+
+. | debian | ubuntu | centos | fedora | opensuse | mageia | busybox
+---- | ------ | ------ | ------ | ------ | -------- | ------ | -------
+sh | YES | YES | YES | YES | YES | YES | YES
+ash | NO | NO | NO | NO | NO | YES | YES
+bash | YES | YES | YES | YES | YES | YES | NO
+dash | YES | YES | NO | NO | NO | NO | NO
+ksh | NO | NO | NO | NO | NO | NO | NO
+pdksh | NO | NO | NO | NO | NO | NO | NO
+mksh | NO | NO | NO | NO | NO | NO | NO
+zsh | NO | NO | NO | NO | NO | NO | NO
+csh | NO | NO | NO | NO | NO | NO | NO
+tcsh | NO | NO | NO | NO | NO | NO | NO
+fish | NO | NO | NO | NO | NO | NO | NO
+scsh | NO | NO | NO | NO | NO | NO | NO
+busybox | NO | NO | NO | NO | NO | NO | YES
+
+(data from 2015-03-17, collected on `./test-commands "debian ubuntu centos fedora opensuse mageia busybox" "sh ash bash dash ksh pdksh mksh zsh csh tcsh fish scsh busybox"`)
 
 #### Scripting languages:
 
