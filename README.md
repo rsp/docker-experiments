@@ -50,27 +50,21 @@ Show how much disk usage is shown by the command: `du -sh`
 ### `test-commands "image1 image2 ..." "command1 command2 ..."`
 
 E.g. `sudo ./test-commands "ubuntu centos" "perl python"
-```
-test-commands - data from 2015-03-17
-See: https://github.com/rsp/docker-experiments
-.	ubuntu	centos
-----	------	------
-perl	YES	NO
-python	NO	YES
-```
+
+. | ubuntu | centos
+---- | ------ | ------
+perl | YES | NO
+python | NO | YES
 
 ### `real-commands "image1 image2 ..." "command1 command2 ..."`
 
 E.g. `sudo ./real-commands "ubuntu centos" "sh perl python"`
-```
-real-commands - data from 2015-03-17
-See: https://github.com/rsp/docker-experiments
-.	ubuntu	centos
-----	------	------
-sh	dash 	bash
-perl	perl 	-
-python	- 	python2
-```
+
+. | ubuntu | centos
+---- | ------ | ------
+sh | dash  | bash 
+perl | perl  | - 
+python | -  | python2 
 
 Results of experiments
 ----------------------
