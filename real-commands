@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# real-commands from docker-experiments
+# https://github.com/rsp/docker-experiments
+# by Rafał Pocztarski - https://github.com/rsp
+
+[ "$1" != "" ] && images="$1" || images="ubuntu centos"
+[ "$2" != "" ] && commands="$2" || commands="perl python"
+
+echo "real-commands - data from `date -I`"
+echo "See: https://github.com/rsp/docker-experiments"
+
+echo -ne ".\t"
+for image in $images; do
+	echo -ne "$image\t"
+done
+echo
+
+echo -ne "----\t"
+for image in $images; do
+	echo -ne "${image//?/-}\t"
+done
+echo
+
+for command in $commands; do
+	echo -ne "$command\t"
+	for image in $images; do
+		result=$(docker run --entrypoint=/bin/sh $image -c \
+		"if command -v $command >/dev/null; then c=\$(command -v $command); \
+		[ -L \$c ] && readlink \$c || ls \$c; else echo '-'; fi" \
+		| sed 's/.*\///' )
+		echo -ne $result "\t";
+	done
+	echo
+done
+
